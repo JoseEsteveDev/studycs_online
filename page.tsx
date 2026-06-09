@@ -1992,3 +1992,4 @@ sys.settrace(_kill_trace)
     </div>
   );
 }
+export default Page;
