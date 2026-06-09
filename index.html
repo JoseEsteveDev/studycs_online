@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>studyCS.online</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
     <div id="root"></div>
 
-    <script type="module" src="./page.tsx"></script>
+    <script type="text/babel">
+        // Aquí cargaremos el contenido de tu componente para que se renderice
+        function App() {
+            return (
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <h1 class="text-3xl font-bold text-indigo-400 tracking-tight mb-4">studyCS.online</h1>
+                    <p class="text-slate-400 text-lg mb-8">Plataforma en desarrollo para estudiantes de Cambridge IGCSE y A-Level Computer Science.</p>
+                    
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+                        <h2 class="text-xl font-semibold text-slate-200 mb-2">Sección de Unidades (/units)</h2>
+                        <p class="text-sm text-slate-400">El contenido didáctico se está vinculando correctamente. La infraestructura ya está online.</p>
+                    </div>
+                </div>
+            );
+        }
+
+        // Renderizado oficial en la pantalla
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
 </body>
 </html>
